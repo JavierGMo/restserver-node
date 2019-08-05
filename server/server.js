@@ -18,11 +18,14 @@ app.use(require('./routes/usuario.js'));
 
 //conexion a la base de datos
 mongoose.connect(process.env.URLDB, { useNewUrlParser: true }, (err, res) => {
-    if (err) throw err;
+        if (err) throw err;
 
-    console.log('Base de datos concetada');
+        console.log('Base de datos concetada');
 
-});
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 
