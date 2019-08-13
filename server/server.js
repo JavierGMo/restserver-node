@@ -9,9 +9,11 @@ const bodyParser = require('body-parser');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
+//para application/json
+app.use(bodyParser.json())
 
-app.use(require('./routes/usuario.js'));
-
+//configuracion desde routes
+app.use(require('./routes/index.js'));
 // parse application/json
 
 
