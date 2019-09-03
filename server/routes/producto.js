@@ -126,6 +126,7 @@ app.get('/productos/buscar/:termino', verificaToken, (req, res)=>{
                 err
             });
         }
+
         if(!productoDB){
             return res.status(400).json({
                 ok: false,
@@ -133,10 +134,10 @@ app.get('/productos/buscar/:termino', verificaToken, (req, res)=>{
             });
         }
 
-        res.json({
+        return res.json({
             ok: true,
             productos: productoDB
-        })
+        });
 
 
     });

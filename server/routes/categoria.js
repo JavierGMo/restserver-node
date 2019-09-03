@@ -1,7 +1,7 @@
 const express = require('express');
 const _ = require('underscore');
 
-const Categoria = require('../models/cateogira');
+const Categoria = require('../models/categoria');
 
 const { verificaToken, verificaAdmin } = require('../middlewares/autenticacion');
 
